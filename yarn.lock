@@ -896,6 +896,13 @@ cjs-module-lexer@^1.0.0:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
 
+clipanion@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/clipanion/-/clipanion-3.0.1.tgz#cba44989fa18a625d7d02800ea98c835e973fc26"
+  integrity sha512-/ujK3YJ1MGjGr18w99Gl9XZjy4xcC/5bZRJXsgvYG6GbUTO4CTKriC+oUxDbo8G+G/dxDqSJhm8QIDnK6iH6Ig==
+  dependencies:
+    typanion "^3.3.1"
+
 cliui@^7.0.2:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
@@ -2436,6 +2443,11 @@ ts-node@^10.2.1:
     diff "^4.0.1"
     make-error "^1.1.1"
     yn "3.1.1"
+
+typanion@^3.3.1, typanion@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/typanion/-/typanion-3.3.2.tgz#c31f3b2afb6e8ae74dbd3f96d5b1d8f9745e483e"
+  integrity sha512-m3v3wtFc6R0wtl0RpEn11bKXIOjS1zch5gmx0zg2G5qfGQ3A9TVZRMSL43O5eFuGXsrgzyvDcGRmSXGP5UqpDQ==
 
 type-check@~0.3.2:
   version "0.3.2"
