@@ -20,6 +20,7 @@
 		"@types/jest": "^27.0.1",
 		"@types/node": "^16.9.1",
 		"jest": "^27.1.1",
+		"memfs": "^3.2.4",
 		"ts-jest": "^27.0.5",
 		"ts-node": "^10.2.1",
 		"typescript": "^4.4.3"
