@@ -1,3 +1,3 @@
-import type { BaseContext } from "clipanion"
+import { BaseContext } from "clipanion"
 
 export type Context = BaseContext
