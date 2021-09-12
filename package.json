@@ -7,5 +7,16 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/zioroboco/wikidir.git"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"compile": "tsc"
+	},
+	"devDependencies": {
+		"@tsconfig/node12": "^1.0.9",
+		"@types/node": "^16.9.1",
+		"typescript": "^4.4.3"
 	}
 }
