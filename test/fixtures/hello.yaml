@@ -1,0 +1,6 @@
+README.md: |
+  # My Cool Project
+
+.gitignore: |
+  node_modules
+  dist

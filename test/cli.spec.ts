@@ -1,15 +1,21 @@
+import yaml from "js-yaml"
+import { DirectoryJSON, vol } from "memfs"
 import { cli } from "../src"
-import { vol } from "memfs"
+import { readFileSync, readdirSync } from "fs"
 
 jest.mock("fs/promises", () => require("memfs").fs.promises)
 
+function fixturePath(name?: string) {
+	return [__dirname, "fixtures", name].filter(Boolean).join("/")
+}
+
+const fixtures = readdirSync(fixturePath())
+	.map(name => [name, readFileSync(fixturePath(name)).toString()])
+	.map(([name, content]) => ({ [name]: yaml.load(content) as DirectoryJSON }))
+	.reduce((acc, curr) => ({ ...acc, ...curr }), {})
+
 it(`works`, async () => {
-	vol.fromJSON(
-		{
-			"README.md": "# Hello world!",
-		},
-		process.cwd()
-	)
+	vol.fromJSON(fixtures["hello.yaml"], process.cwd())
 
 	const context = {
 		stdout: { write: jest.fn() },
@@ -25,6 +31,10 @@ it(`works`, async () => {
 
 	expect(context.stdout.write).toHaveBeenCalledWith(
 		expect.stringMatching("README.md")
+	)
+
+	expect(context.stdout.write).toHaveBeenCalledWith(
+		expect.stringMatching(".gitignore")
 	)
 
 	expect(context.stdout.write).not.toHaveBeenCalledWith(
