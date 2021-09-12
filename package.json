@@ -1,0 +1,11 @@
+{
+	"name": "wikidir",
+	"description": "Maintain your wiki alongside your code.",
+	"version": "0.0.0-unversioned",
+	"author": "Louis Quinnell <_@ziorobo.co>",
+	"license": "0BSD",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zioroboco/wikidir.git"
+	}
+}
